@@ -40,16 +40,12 @@ function playHangman() {
       if (user.PlayGame === "Yes") {
         console.log("Great! Here's your first word:");
         // functions to begin game here
-        currentRanWord();
-        displayRandom(randomizedWord);
-        userGuess();
+        beginGame();
       } else {
         console.log("Too bad! You're playing anyways! MUAHAHA!!!");
         console.log("Here's your first word: ");
         // functions to begin game also here
-        currentRanWord();
-        displayRandom(randomizedWord);
-        userGuess();
+        beginGame();
       }
     });
 }
