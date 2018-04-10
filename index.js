@@ -58,7 +58,7 @@ function chooseWord() {
   };
 }
 
-//function to begin the hangman game.
+//function to begin the hangman game by running the necessary functions
 function beginGame() {
   guesses = 7;
   incorrectLetter = [];
@@ -67,14 +67,16 @@ function beginGame() {
   userGuess();
 }
 
+//chooses a word from the array...
 function currentRanWord() {
   randomizedWord = newGame.getRandomWord(wordArray);
-  console.log("Random Word: ", randomizedWord);
+  console.log("The Current Word (for easy testing): ", randomizedWord);
   var randIndex = wordArray.indexOf(randomizedWord);
   var removeChosenWord = wordArray.splice(randIndex, 1);
   return;
 }
 
+//displays word
 function displayRandom(randomCurrentWord) {
   currentWord = "";
   for (var i = 0; i < randomCurrentWord.length; i++) {
